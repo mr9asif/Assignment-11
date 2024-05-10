@@ -1,6 +1,8 @@
 import  { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import swal from 'react-sweetalert2';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const AddBlog = () => {
     const {user} = useContext(AuthContext)
@@ -9,43 +11,41 @@ const AddBlog = () => {
         e.preventDefault();
         const form = e.target;
         const imageUrl = form.imageUrl.value;
-        const touristSpotName = form.touristSpotName.value;
-        const countryName = form.countryName.value;
-        const location = form.location.value;
-        const description = form.description.value;
-        const averageCost = form.averageCost.value;
-        const seasonality = form.seasonality.value;
-        const travelTime = form.travelTime.value;
-        const totalvisitor = form.totalvisitor.value;
+        const title = form.title.value;
+        const catagory = form.catagory.value;
+        const shortDiscription = form.shortDiscription.value;
+        const lognDescription = form.lognDescription.value;
+     
         const username = form.username.value;
         const userEmail = form.userEmail.value;
 
-        const TouristSpot = {imageUrl, touristSpotName, countryName, location, description, averageCost, 
-                          seasonality, travelTime, totalvisitor, username, userEmail, 
+        const Blogs = {imageUrl, title, catagory, shortDiscription, lognDescription, username, userEmail, 
         }
-              console.log(TouristSpot)
+              console.log(Blogs)
 
-          fetch('https://as-10-server.vercel.app/addTourists',{
-            method:'POST',
-            headers:{
-                'content-type':'application/json'
-            },
-            body:JSON.stringify(TouristSpot)
+              axios.post('http://localhost:4000/addblogs', Blogs)
+              .then(response => {
+                console.log(response.data);
+                if (response.data.insertedId) {
+                //   swal.fire({
+                //     position: "center",
+                //     icon: "success",
+                //     title: "You Added Tourist Spots Successfully",
+                //     showConfirmButton: false,
+                //     timer: 2000
+                //   });
 
-          } )
-          .then(res=>res.json())
-          .then(data=>{
-            console.log(data)
-            if(data.insertedId){
-                swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "You Added Tourist Spots Succesfully",
-                    showConfirmButton: false,
-                    timer: 2000
-                  })
-            }
-          })
+                toast.success('you added successfully')
+                }
+              })
+              .catch(error => {
+                console.error('Error:', error);
+              });
+            
+        //   .then(data=>{
+        //     console.log(data)
+        //    
+        //   })
 
 
     }

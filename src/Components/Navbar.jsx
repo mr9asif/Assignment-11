@@ -29,8 +29,8 @@ const Navbar = () => {
     }
   }
 
-  const handleSignOut = () =>{
-    signout()
+  const handleSignOut = async() =>{
+   await  signout()
   }
     return (
         <div>
@@ -60,13 +60,13 @@ const Navbar = () => {
         <NavLink to='/' className={({isActive})=>isActive? 'font-extrabold text-orange-400 underline  text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]' }>Home</NavLink>
         <NavLink to='/allblogs' className={({isActive})=>isActive? ' font-bold text-orange-400 underline text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]'}>All Blogs</NavLink>
        {
-          <NavLink to='/addblogs' className={({isActive})=>isActive?' font-bold text-orange-400 underline text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]'}>ADD Blogs</NavLink>
+        user &&  <NavLink to='/addblogs' className={({isActive})=>isActive?' font-bold text-orange-400 underline text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]'}>ADD Blogs</NavLink>
        }
        {
          <NavLink to='/featureblogs' className={({isActive})=>isActive?' font-bold text-orange-400 underline text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]'}>Featured Blogs</NavLink>
        }
        {
-         <NavLink to='/wishlistblogs' className={({isActive})=>isActive?' text-orange-400 font-bold underline text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]'}>WishLists</NavLink>
+         user &&  <NavLink to='/wishlistblogs' className={({isActive})=>isActive?' text-orange-400 font-bold underline text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]'}>WishLists</NavLink>
        }
         <NavLink to='/about' className={({isActive})=>isActive?'font-bold text-orange-400 underline text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]'}>About Us</NavLink>
        
