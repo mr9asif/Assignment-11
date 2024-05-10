@@ -16,7 +16,7 @@ const NewsLetter = () => {
     return (
         <div className="flex justify-between items-center max-w-5xl mx-auto my-12 px-8">
                   <div className="w-1/2" >
-                  <img className="w-[1000px]" src="https://i.postimg.cc/rw8D3Zwm/concept-subscribe-newsletter-sign-email-illustration-163176627-iconl-nowm.webp" alt="" />
+                  <img className="w-[1000px]" src="https://i.postimg.cc/P5wq8fVc/3551757.webp" alt="" />
                   </div>
 
         <div className="w-1/2 p-4">
