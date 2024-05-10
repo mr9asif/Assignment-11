@@ -1,14 +1,17 @@
-import axios from "axios";
+
 import { useContext, useEffect, useState } from "react";
-import toast from "react-hot-toast";
+
 import { AuthContext } from "../Provider/AuthProvider";
 import { useParams } from "react-router-dom";
+import Swal from "react-sweetalert2";
 
 
 const UpdateBlogs = () => {
     const {id}= useParams()
+   
+    const [update, setUpdate]= useState({})
         const [data, setData]=useState({})
-        const {imageUrl, title,_id, catagory,shortDiscription , lognDescription, userEmail} = data;
+        const {imageUrl, title,_id, catagory,shortDiscription , lognDescription, } = data;
         console.log(data)
     const {user} = useContext(AuthContext)
     
@@ -41,22 +44,54 @@ const UpdateBlogs = () => {
         }
               console.log(Blogs)
 
-              axios.post('http://localhost:4000/addblogs', Blogs)
-              .then(response => {
-                console.log(response.data);
-                if (response.data.insertedId) {
-
-                toast.success('you added successfully')
-                }
-              })
-              .catch(error => {
-                console.error('Error:', error);
-              });
-            
+          
               
+              Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, update it!"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire({
+                    title: "Updated!",
+                    text: "Your file has been Updated.",
+                    icon: "success"
+                  });
 
+                  fetch(`http://localhost:4000/update/${id}`,{
+                    method:'PUT',
+                    headers:{
+                        'content-type': 'application/json'
+                    },
+                    body:JSON.stringify(Blogs)
+                 })
+                 .then(res=>res.json())
+                 .then(data=>{
+                    console.log(data)
+                 })
+                }
+              });
 
-    }
+           
+   
+  }
+    
+//   const {imageUrl, title,_id, catagory,shortDiscription , lognDescription, userEmail} = update;
+
+     useEffect(() => {
+        fetch(`http://localhost:4000/update/${id}`)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setUpdate(data)
+                
+            })
+    }, [id]);
+
 
     return (
         <div>
@@ -146,7 +181,7 @@ const UpdateBlogs = () => {
                />
            </div>
            <div className="form-group col-span-2">
-               <button type="submit" className="btn btn-primary w-full">ADD</button>
+               <button type="submit" className="btn btn-primary bg-orange-500 text-gray-700 hover:bg-orange-600 hover:text-white w-full">Update</button>
            </div>
        </form>
    </div>
