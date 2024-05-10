@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 const Banner = () => {
     return (
         <div>
-        <div className="hero h-[550px]" style={{backgroundImage: 'url(https://i.postimg.cc/Hxvvj0Hm/meet-the-team-jpg-width-595-height-400-name-meet-the-team.jpg)'}}>
+        <div className="hero h-[600px]" style={{backgroundImage: 'url(https://i.postimg.cc/Hxvvj0Hm/meet-the-team-jpg-width-595-height-400-name-meet-the-team.jpg)'}}>
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="w-full">

@@ -1,10 +1,13 @@
-import { Button } from "@mui/material";
-import { useEffect, useState } from "react";
+
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Navbar = () => {
   const [theme, setTheme]= useState('light');
+  const {user, signout}= useContext(AuthContext)
+  console.log(user)
 
 
 
@@ -18,11 +21,16 @@ const Navbar = () => {
   },[theme])
 
   const handleThemeChange=(e)=>{
+    
     if(e.target.checked){
        setTheme('blue')
     }else{
       setTheme('light')
     }
+  }
+
+  const handleSignOut = () =>{
+    signout()
   }
     return (
         <div>
@@ -67,9 +75,34 @@ const Navbar = () => {
       </ul>
         </div>
         <div className="navbar-end">
-         <Link className="mr-5" to='register'> <button className="btn btn-outline  text-orange-400 hover:bg-orange-400 font-bold text-xl hover:text-white">Register</button></Link>
-         <Link to='login'>  <button className="btn btn-outline text-orange-400 hover:bg-orange-400 font-bold text-xl hover:text-white">Login</button></Link>
-
+   
+        {
+          user ? (
+              
+            <div className={`flex items-center gap-4 `}>
+            {user.photoURL ? (
+              <img  src={user.photoURL} alt="" className={`w-[50px] rounded-[50%] `} />
+          ) : (
+            <img src="https://i.postimg.cc/gjR4qBVg/blank-profile-picture-973460-1280.png" alt="" className="w-[45px] p-1 border rounded-[50%]" />
+          )}
+           
+                  <Link onClick={handleSignOut} className="btn btn-outline text-orange-400 hover:bg-orange-400 font-bold text-xl hover:text-white">
+                      Sign out
+                  </Link>
+              </div>
+          ) : (
+            <div>
+            <Link className="mr-5 btn btn-outline text-orange-400 hover:bg-orange-400 font-bold text-xl hover:text-white" to='/register'>
+                Register
+            </Link>
+            <Link className="btn btn-outline text-orange-400 hover:bg-orange-400 font-bold text-xl hover:text-white" to='/login'>
+                Login
+            </Link>
+        </div>
+          )
+      }
+     
+   
              
          <div className="mx-4">
          <label className="swap swap-rotate">
