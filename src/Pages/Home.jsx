@@ -1,4 +1,5 @@
 
+import AboutUs from '../Components/AboutUs';
 import Banner from '../Components/Banner';
 import NewsLetter from '../Components/NewsLetter';
 
@@ -6,6 +7,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <AboutUs></AboutUs>
             {/* blogging*/}
             <NewsLetter></NewsLetter>
         </div>
