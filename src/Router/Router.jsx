@@ -10,6 +10,9 @@ import About from "../Pages/About";
 import Register from "../Components/Register";
 import Login from "../Components/Login";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import ViewDetails from "../Components/ViewDetails";
+import UpdateBlogs from "../Components/UpdateBlogs";
+import Redirect from "../PrivetRoute/Redirect";
 
 const router=createBrowserRouter([
      {
@@ -29,6 +32,12 @@ const router=createBrowserRouter([
                 path:'/addblogs',
                 element:<PrivetRoute>
                 <AddBlog></AddBlog>
+                </PrivetRoute>
+            },
+            {
+                path:'/updateblogs/:id',
+                element:<PrivetRoute>
+                <UpdateBlogs></UpdateBlogs>
                 </PrivetRoute>
             },
             {
@@ -52,7 +61,16 @@ const router=createBrowserRouter([
             {
                 path:'/login',
                 element:<Login></Login>
-            }
+            },
+            {
+                path:'/viewdetails/:id',
+                element:<Redirect>
+                <ViewDetails></ViewDetails>,
+                </Redirect>
+              
+                
+            },
+
         ])
      }
 ])

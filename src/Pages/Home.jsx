@@ -11,7 +11,7 @@ const Home = () => {
             <AboutUs></AboutUs>
             <RecentBlogs></RecentBlogs>
             {/* blogging*/}
-            <NewsLetter></NewsLetter>
+        <NewsLetter></NewsLetter>
         </div>
     );
 };

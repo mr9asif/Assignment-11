@@ -34,7 +34,7 @@ const Navbar = () => {
   }
     return (
         <div>
-        <div className="navbar px-12 mx-auto max-w-8xl my-4">
+        <div className="navbar px-12 mx-auto shadow-md max-w-8xl my-4">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -81,7 +81,7 @@ const Navbar = () => {
               
             <div className={`flex items-center gap-4 `}>
             {user.photoURL ? (
-              <img  src={user.photoURL} alt="" className={`w-[50px] rounded-[50%] `} />
+              <img  src={user.photoURL} alt="" className={`w-[50px] h-[50px] rounded-[50%] `} />
           ) : (
             <img src="https://i.postimg.cc/gjR4qBVg/blank-profile-picture-973460-1280.png" alt="" className="w-[45px] p-1 border rounded-[50%]" />
           )}
