@@ -12,14 +12,16 @@ const Blogs = ({ blog }) => {
     const email = user.email;
     const { imageUrl, title, _id, catagory, shortDiscription, lognDescription } = blog;
 
+
     const handleWishList = () => {
+   
         const b = { imageUrl, title, _id, catagory, shortDiscription, lognDescription, email };
 
         // Fetch wishlist data
         axios.get(`http://localhost:4000/wishlistblogs/${email}`)
             .then(res => {
                 console.log(res.data);
-        
+               
 
                 // Check if the blog already exists in the wishlist
                 const existingWish = res.data.find(w => w._id === _id);
@@ -34,6 +36,7 @@ const Blogs = ({ blog }) => {
                         console.log(res.data);
                         if (res.data && res.data.insertedId) {
                             toast.success('You added Wishlist Successfully!');
+                    
                         } else {
                             toast.error('Unexpected response from server');
                         }
@@ -47,9 +50,10 @@ const Blogs = ({ blog }) => {
                 console.log(error);
             });
     };
-
+ 
     return (
         <div>
+         
             <div className="bg-gray-200 shadow-lg rounded-md relative h-[480px]">
                 <img className="w-full p-2" src={imageUrl} alt="" />
                 <div className="p-5">
