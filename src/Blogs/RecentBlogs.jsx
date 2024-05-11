@@ -10,8 +10,8 @@ const RecentBlogs = () => {
                 const response = await axiosSecure('/allblogs');
                 return response.data;
             } catch (error) {
-                throw new Error("Failed to fetch blogs");
-            }
+               throw new Error("Failed to fetch blogs");
+            } 
         },
         queryKey: ['blogs'],
     });

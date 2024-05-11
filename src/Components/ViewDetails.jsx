@@ -23,6 +23,9 @@ const ViewDetails = () => {
        const {imageUrl, title,_id, catagory,shortDiscription , lognDescription, userEmail} = details;
     
 
+
+
+       
    useEffect(() => {
        fetch(`http://localhost:4000/viewdetails/${id}`)
            .then(res => res.json())

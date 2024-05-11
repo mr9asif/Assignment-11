@@ -3,13 +3,14 @@ import { useContext, useEffect, useState } from "react";
 
 import { AuthContext } from "../Provider/AuthProvider";
 import { useParams } from "react-router-dom";
-import Swal from "react-sweetalert2";
+import Swal from 'sweetalert2';
+
 
 
 const UpdateBlogs = () => {
     const {id}= useParams()
    
-    const [update, setUpdate]= useState({})
+    // const [update, setUpdate]= useState({})
         const [data, setData]=useState({})
         const {imageUrl, title,_id, catagory,shortDiscription , lognDescription, } = data;
         console.log(data)
@@ -39,8 +40,9 @@ const UpdateBlogs = () => {
      
         const username = form.username.value;
         const userEmail = form.userEmail.value;
+        const profile = form.profile.value;
 
-        const Blogs = {imageUrl, title, catagory, shortDiscription, lognDescription, username, userEmail, 
+        const Blogs = {imageUrl, title, catagory, shortDiscription, lognDescription, username, userEmail, profile
         }
               console.log(Blogs)
 
@@ -73,6 +75,9 @@ const UpdateBlogs = () => {
                  .then(data=>{
                     console.log(data)
                  })
+                 .then(error=>{
+                    console.log(error)
+                 })
                 }
               });
 
@@ -82,15 +87,15 @@ const UpdateBlogs = () => {
     
 //   const {imageUrl, title,_id, catagory,shortDiscription , lognDescription, userEmail} = update;
 
-     useEffect(() => {
-        fetch(`http://localhost:4000/update/${id}`)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setUpdate(data)
+    //  useEffect(() => {
+    //     fetch(`http://localhost:4000/update/${id}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             setUpdate(data)
                 
-            })
-    }, [id]);
+    //         })
+    // }, [id]);
 
 
     return (
@@ -176,6 +181,17 @@ const UpdateBlogs = () => {
                    id="totalVisitorsPerYear"
                    name="userEmail"
                    value={user.email}
+                   disabled
+                   className="input input-bordered w-full"
+               />
+           </div>
+           <div className="form-group col-span-2">
+               <label  className="text-xl font-semibold"  htmlFor="totalVisitorsPerYear">User Profile</label>
+               <input
+                   type="text"
+                   id="totalVisitorsPerYear"
+                   name="profile"
+                   value={user?.photoURL}
                    disabled
                    className="input input-bordered w-full"
                />
