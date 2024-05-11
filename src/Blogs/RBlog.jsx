@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const RBlog = ({ blog }) => {
+    const {user}= useContext(AuthContext)
     const { imageUrl, title, _id, catagory, shortDiscription, lognDescription } = blog;
+
 
     return (
         <div className="bg-gray-200 shadow-lg rounded-md relative h-[500px]">
@@ -16,7 +20,7 @@ const RBlog = ({ blog }) => {
                     <Link to={`/viewdetails/${_id}`}>
                         <button className="btn btn-outline bg-orange-400 hover:bg-orange-600 hover:text-white text-[15px] text-gray-700">View Details</button>
                     </Link>
-                    <button className="btn btn-outline bg-orange-400 hover:bg-orange-600 hover:text-white text-[15px] text-gray-700">Add WishList</button>
+                    <Link to='/wishlistblogs'><button className="btn btn-outline bg-orange-400 hover:bg-orange-600 hover:text-white text-[15px] text-gray-700">Add WishList</button></Link>
                 </div>
             </div>
         </div>

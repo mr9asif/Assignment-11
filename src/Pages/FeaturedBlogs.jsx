@@ -32,7 +32,7 @@ const FeaturedBlogs = () => {
         <div>
             <h1 className="text-3xl font-bold text-orange-500 text-center my-6">Latest Blogs</h1>
 
-                <div>
+                <div className="my-6">
                 {
                     sortedData.slice(0,10).map((fblog, index)=> <Fblog key={fblog._id} fblog={fblog} index={index + 1}></Fblog>)
                 }

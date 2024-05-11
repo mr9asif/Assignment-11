@@ -1,6 +1,7 @@
 import  { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
-import swal from 'react-sweetalert2';
+import Swal from 'sweetalert2';
+
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
@@ -27,15 +28,15 @@ const AddBlog = () => {
               .then(response => {
                 console.log(response.data);
                 if (response.data.insertedId) {
-                //   swal.fire({
-                //     position: "center",
-                //     icon: "success",
-                //     title: "You Added Tourist Spots Successfully",
-                //     showConfirmButton: false,
-                //     timer: 2000
-                //   });
+                  Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "You Added Tourist Spots Successfully",
+                    showConfirmButton: false,
+                    timer: 2000
+                  });
 
-                toast.success('you added successfully')
+                // toast.success('you added successfully')
                 }
               })
               .catch(error => {
