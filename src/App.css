@@ -1,42 +1,126 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  /* background: #eee; */
+  
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
   text-align: center;
+  font-size: 18px;
+  /* background: #fff; */
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.slide1{
+  background-image: url('https://i.postimg.cc/tRWrSg6T/west-beach-st-martins-island-600nw-1958317543.jpg');
+  background-size: cover;
+}
+.slide2{
+  background-image: url('https://i.postimg.cc/BQvK8YJ0/Sundarban-Tiger-Roar-1.jpg');
+  background-size: cover;
+}
+.slide3{
+  background-image: url('https://i.postimg.cc/kXpdPpT5/wp3426164.jpg');
+  background-size: cover;
+}
+.slide4{
+  background-image: url('https://i.postimg.cc/XvGVG0Dm/420219.jpg');
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+/* offerr */
+.offer{
+  background-image: url('https://i.postimg.cc/BvST3Zks/a-holiday-couple-in-white-summer-clothing-walks-down-a-paradise-beach.webp');
+  background-size: cover;
+
 }
 
-.card {
-  padding: 2em;
+/* coutryss */
+.bangladesh{
+  background-image: url('https://i.postimg.cc/QMY4KWC2/feat-30d48d6e-7b84-4dfe-bf22-6306f8a2d403.jpg');
+  background-size: cover;
+}
+.thailand{
+  background-image: url('https://i.postimg.cc/sxzpXsHV/Phi-Phi-2.jpg');
+  background-size: cover;
+}
+.indonesia{
+  background-image: url('https://i.postimg.cc/15jf7y0f/indonesia-cover-2.jpg');
+  background-size: cover;
+}
+.malaysia{
+  background-image: url('https://i.postimg.cc/9MQ2j7CV/original-bd06da40359dfaf784fc5f1367d0e597.jpg');
+  background-size: cover;
+}
+.vietnam{
+  background-image: url('https://i.postimg.cc/kMZmkGZ3/shutterstock-RF-1019924119.jpg');
+  background-size: cover;
+}
+.combodia{
+  background-image: url('https://i.postimg.cc/DzBV5wsN/Untitled-design-3.jpg');
+  background-size: cover;
 }
 
-.read-the-docs {
-  color: #888;
+/* drop */
+.profile:hover .drop {
+  display: block;
 }
+
+/* .ss1{
+  background-image:url('https://i.postimg.cc/BQvK8YJ0/Sundarban-Tiger-Roar-1.jpg') ;
+  background-size: cover;
+  
+}
+
+.ss2{
+  background-image:url('https://i.postimg.cc/BQvK8YJ0/Sundarban-Tiger-Roar-1.jpg') ;
+  background-size: cover;
+  
+}
+.ss3{
+  background-image:url('https://i.postimg.cc/BQvK8YJ0/Sundarban-Tiger-Roar-1.jpg') ;
+  background-size: cover;
+  
+  
+}
+.ss4{
+  background-image:url('https://i.postimg.cc/BQvK8YJ0/Sundarban-Tiger-Roar-1.jpg') ;
+  background-size: cover;
+  
+}
+.ss5{
+  background-image:url('https://i.postimg.cc/BQvK8YJ0/Sundarban-Tiger-Roar-1.jpg') ;
+  background-size: cover;
+  
+} */
