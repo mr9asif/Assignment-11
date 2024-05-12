@@ -56,9 +56,9 @@ const AllBlogs = () => {
         <div className="">
             <h1 className="text-3xl font-bold my-4 text-orange-400 text-center">All Blogs</h1>
 
-            <div className='my-4 px-7  flex justify-evenly items-center  border rounded-xl py-4'>
+            <div className='my-4 px-7  flex justify-evenly items-center bg-orange-200  border rounded-xl py-4'>
                 <div className="dropdown dropdown-right">
-                    <div tabIndex={0} role="button" className="btn text-xl font-bold text-gray-100 bg-gray-600 hover:bg-orange-500 m-1">{selectedCatagory ? selectedCatagory : 'All'}</div>
+                    <div tabIndex={0} role="button" className="flex items-center border px-5 text-xl py-2 bg-gray-400  hover:bg-orange-500 hover:text-white cursor-pointer rounded-xl gap-2 "><button>{selectedCatagory ? selectedCatagory : 'All'}</button></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li className="text-[16px] font-bold text-orange-400"><a onClick={() => handleCatagoryChange('')}>All</a></li>
                         <li className="text-[16px] font-bold text-orange-400"><a onClick={() => handleCatagoryChange('Technology')}>Technology</a></li>

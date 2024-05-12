@@ -43,18 +43,19 @@ const Wishlisht = ({wish, wishlist, setWishlist}) => {
       }
     return (
         <div>
-        <div className="bg-gray-200 shadow-lg rounded-md relative h-[480px]">
-        <img className="w-full p-2" src={imageUrl} alt="" />
+        <div className="bg-gray-200 shadow-lg rounded-md relative h-[500px]">
+        <img className="w-full h-[300px] p-2" src={imageUrl} alt="" />
         <div className="p-5">
             <h1 className="text-2xl font-bold text-orange-600 ">{title}</h1>
             <h1 className="text-xl font-bold text-green-600"><span>Catagory: </span>{catagory}</h1>
-            <p className="text-[16px] font-semibold text-gray-500">{shortDiscription}</p>
+            <p className="text-[16px] font-semibold text-gray-500">{shortDiscription.slice(0, 90)}..</p>
 
-            <div className="flex justify-between items-center mb-3  px-6 my-2 absolute bottom-0">
-                <Link to={`/viewdetails/${_id}`}><button className="btn btn-outline mr-24 bg-orange-400 hover:bg-orange-600 hover:text-white text-[15px] text-gray-700">View Details</button></Link>
-                <button onClick={()=>handleRemove(_id)} className="btn btn-outline mr-24 bg-orange-400 hover:bg-orange-600 hover:text-white text-[15px] text-gray-700">Remove</button>
-               
-            </div>
+            <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center mb-3 px-6 my-2">
+                    <Link to={`/viewdetails/${_id}`}>
+                        <button className="btn btn-outline bg-green-400 hover:bg-green-600 hover:text-white text-[15px] text-gray-700">View Details</button>
+                    </Link>
+                    <button onClick={()=>handleRemove(_id)} className="btn btn-outline bg-orange-400 hover:bg-orange-600 hover:text-white text-[15px] text-gray-700">Remove</button>
+                </div>
         </div>
     </div>
         </div>

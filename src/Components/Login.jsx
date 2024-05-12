@@ -23,22 +23,23 @@ const Login = () => {
  const {register,handleSubmit, formState: { errors },} = useForm()
 
 
-// const handleGoogleSignIN = () =>{
-//  googleSignIn()
-//  .then(result=>{
-//    if(result.user){
-//      console.log(result.user)
-//      navigate(from)
-//    }
-//  })
-// }
 
 const handleSocialLogin = socialLogin =>{
     socialLogin()
     .then(result=>{
       if(result.user){
+        const { email } = result.user;
+        const us = { email };
         console.log(result.user)
         navigate(from)
+
+        axios.post('http://localhost:4000/jwt', us ,  {withCredentials:true})
+        .then(res => {
+            console.log(res.data);
+        })
+        .catch(error => {
+            console.log(error.message);
+        });
       }
     })
    }

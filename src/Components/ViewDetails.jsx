@@ -27,7 +27,7 @@ const ViewDetails = () => {
 
        
    useEffect(() => {
-       fetch(`http://localhost:4000/viewdetails/${id}`, )
+       fetch(`http://localhost:4000/viewdetails/${id}` )
            .then(res => res.json())
            .then(data => {
            

@@ -18,7 +18,7 @@ const Blogs = ({ blog }) => {
         const b = { imageUrl, title, _id, catagory, shortDiscription, lognDescription, email };
 
         // Fetch wishlist data
-        axios.get(`http://localhost:4000/wishlistblogs/${email}`)
+        axios.get(`http://localhost:4000/wishlistblogs/${email}` )
             .then(res => {
                 console.log(res.data);
                
