@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 const RBlog = ({ blog }) => {
     const { user } = useContext(AuthContext);
-    const email = user.email;
+    const email = user?.email;
     const { imageUrl, title, _id, catagory, shortDiscription, lognDescription } = blog;
 
 
@@ -50,7 +50,7 @@ const RBlog = ({ blog }) => {
     return (
 
         <div className="bg-gray-200 shadow-lg rounded-md relative h-[500px]">
-            <img className="w-full p-2" src={imageUrl} alt="" />
+            <img className="w-full h-[300px] p-2" src={imageUrl} alt="" />
             <div className="p-5">
                 <h1 className="text-2xl font-bold text-orange-600">{title}</h1>
                 <h1 className="text-xl font-bold text-green-600"><span>Catagory: </span>{catagory}</h1>
@@ -59,7 +59,7 @@ const RBlog = ({ blog }) => {
                 {/* Positioning the buttons at the bottom */}
                 <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center mb-3 px-6 my-2">
                     <Link to={`/viewdetails/${_id}`}>
-                        <button className="btn btn-outline bg-orange-400 hover:bg-orange-600 hover:text-white text-[15px] text-gray-700">View Details</button>
+                        <button className="btn btn-outline bg-green-400 hover:bg-green-600 hover:text-white text-[15px] text-gray-700">View Details</button>
                     </Link>
                     <button onClick={handleWishList} className="btn btn-outline bg-orange-400 hover:bg-orange-600 hover:text-white text-[15px] text-gray-700">Add WishList</button>
                 </div>

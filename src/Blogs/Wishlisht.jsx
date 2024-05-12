@@ -9,8 +9,8 @@ const Wishlisht = ({wish, wishlist, setWishlist}) => {
     console.log(wish)
 
 
-    const handleRemove = _id => {
-        console.log('delete', _id);
+    const handleRemove = id => {
+        console.log('delete', id);
     
         Swal.fire({
           title: "Are you sure?",
@@ -22,14 +22,14 @@ const Wishlisht = ({wish, wishlist, setWishlist}) => {
           confirmButtonText: "Yes, delete it!"
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:4000/wish/${_id}`, {
+            fetch(`http://localhost:4000/wish/${id}`, {
               method: 'DELETE'
             })
               .then(res => res.json())
               .then(data => {
                 console.log(data);
                 if (data.deletedCount > 0) {
-                  const remaining = wishlist.filter(item => item._id !== _id);
+                  const remaining = wishlist.filter(item => item._id !== id);
                   setWishlist(remaining);
                   Swal.fire({
                     title: "Deleted!",

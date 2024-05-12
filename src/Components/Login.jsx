@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const Login = () => {
   const [show, setShow] = useState(false)
@@ -52,7 +53,15 @@ const handleSocialLogin = socialLogin =>{
      if(result.user){
        toast.success('You Login Successfully!')
        console.log(result.user)
+       const us = { email };
        navigate(from)
+       axios.post('http://localhost:4000/jwt', us ,  {withCredentials:true})
+       .then(res => {
+           console.log(res.data);
+       })
+       .catch(error => {
+           console.log(error.message);
+       });
      }
    })
    .catch(error=>{

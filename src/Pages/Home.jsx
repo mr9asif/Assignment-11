@@ -13,7 +13,7 @@ const Home = () => {
             <RecentBlogs></RecentBlogs>
             {/* blogging*/}
         <NewsLetter></NewsLetter>
-        <Testimonial></Testimonial>
+        
         </div>
     );
 };

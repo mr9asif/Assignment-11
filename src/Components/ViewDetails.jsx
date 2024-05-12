@@ -19,7 +19,7 @@ const ViewDetails = () => {
   window.scrollTo(0, 0)
     const {id}= useParams();
     const [details, setDetails]= useState({})
-     
+  
        const {imageUrl, title,_id, catagory,shortDiscription , lognDescription, userEmail} = details;
     
 
@@ -27,7 +27,7 @@ const ViewDetails = () => {
 
        
    useEffect(() => {
-       fetch(`http://localhost:4000/viewdetails/${id}`)
+       fetch(`http://localhost:4000/viewdetails/${id}`, )
            .then(res => res.json())
            .then(data => {
            

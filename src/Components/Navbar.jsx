@@ -2,12 +2,15 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import axios from "axios";
+import UseAxiosSecure from "../UseAxios/UseAxiosSecure";
 
 
 const Navbar = () => {
   const [theme, setTheme]= useState('light');
   const {user, signout}= useContext(AuthContext)
   console.log(user)
+
 
 
 
@@ -31,6 +34,7 @@ const Navbar = () => {
 
   const handleSignOut = async() =>{
    await  signout()
+   axios.post('http://localhost:4000/logout', {}, {withCredentials:true})
   }
     return (
         <div>
