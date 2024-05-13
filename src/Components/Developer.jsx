@@ -16,8 +16,8 @@ const Developer = () => {
     return (
         <div>
         <div className='w-[95%] lg:max-w-7xl mx-auto'>
-        <h1 data-aos='zoom-in-down' data-aos-duration="1000" className="tracking-[10px] text-green-600 font-semibold text-center text-xl my-6">Developer</h1>
-        <h1 data-aos='zoom-in-down' data-aos-duration="1000" className="tracking-[5px] text-orange-500 font-semibold text-center text-3xl my-6">Meet Our Team Member</h1>
+        <h1 data-aos='zoom-in-down' data-aos-duration="1200" className="tracking-[10px] text-green-600 font-semibold text-center text-xl my-6">Developer</h1>
+        <h1 data-aos='zoom-in-down' data-aos-duration="1200" className="tracking-[5px] text-orange-500 font-semibold text-center text-3xl my-6">Meet Our Team Member</h1>
 
         <div className='w-[95%] lg:max-w-7xl mx-auto'>
         <Swiper
@@ -30,7 +30,7 @@ const Developer = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-        <div data-aos="flip-left"  data-aos-duration="1200"  className='flex flex-col justify-center lg:w-[300px] h-[160px] lg:h-[250px] items-center gap-1 shadow-lg  bg-gray-400'>
+        <div data-aos="fade-up"  data-aos-duration="1200"  className='flex flex-col justify-center lg:w-[300px] h-[160px] lg:h-[250px] items-center gap-1 shadow-lg  bg-gray-400'>
         <div className='  '>
          <img className='w-[full] h-[180px]  ' src="https://i.postimg.cc/25NQm2Qf/240-F-517432572-Q7c-WRe-Fs-AWb-Fjm-OCxb-JUn-Me-Eb-Lac-ZCEl.jpg" alt="" />
         </div>
@@ -43,7 +43,7 @@ const Developer = () => {
   
         </SwiperSlide>
         <SwiperSlide>
-        <div data-aos="flip-down"  data-aos-duration="1200"  className='flex flex-col justify-center lg:w-[300px]  h-[160px] lg:h-[250px] items-center gap-1 shadow-lg bg-gray-400'>
+        <div data-aos="fade-up"  data-aos-duration="1200"  className='flex flex-col justify-center lg:w-[300px]  h-[160px] lg:h-[250px] items-center gap-1 shadow-lg bg-gray-400'>
         <div className='  '>
          <img className='w-[full] h-[180px]' src="https://i.postimg.cc/jqD4Hwdm/image.jpg" alt="" />
         </div>
@@ -56,7 +56,7 @@ const Developer = () => {
   
         </SwiperSlide>
         <SwiperSlide>
-        <div data-aos="flip-up"  data-aos-duration="1200"  className='flex flex-col justify-center  lg:w-[300px]  h-[160px] lg:h-[250px] items-center gap-1 shadow-lg  bg-gray-400'>
+        <div data-aos="fade-up"  data-aos-duration="1200"  className='flex flex-col justify-center  lg:w-[300px]  h-[160px] lg:h-[250px] items-center gap-1 shadow-lg  bg-gray-400'>
         <div className=' '>
          <img className='w-[full] h-[180px]' src="https://i.postimg.cc/DwTQ3xd3/depositphotos-294712776-stock-photo-young-handsome-indian-man-wearing.webp" alt="" />
         </div>
@@ -69,7 +69,7 @@ const Developer = () => {
   
         </SwiperSlide>
         <SwiperSlide>
-        <div data-aos="flip-right"  data-aos-duration="1200"  className='flex flex-col justify-center lg:w-[300px]  h-[160px] lg:h-[250px] items-center gap-1 shadow-lg  bg-gray-400'>
+        <div data-aos="fade-up"  data-aos-duration="1200"  className='flex flex-col justify-center lg:w-[300px]  h-[160px] lg:h-[250px] items-center gap-1 shadow-lg  bg-gray-400'>
         <div className=' '>
          <img className='w-[full] h-[180px]' src="https://i.postimg.cc/Jh7bGt2T/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confide.jpg" alt="" />
         </div>

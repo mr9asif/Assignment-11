@@ -49,7 +49,8 @@ const RBlog = ({ blog }) => {
     };
     return (
 
-        <div className="bg-gray-200 shadow-lg rounded-md relative h-[500px]">
+        <div  data-aos="fade-up"
+        data-aos-duration="2000" className="border-l-orange-200-100 shadow-lg rounded-md relative h-[500px]">
             <img className="w-full h-[300px] p-2" src={imageUrl} alt="" />
             <div className="p-5">
                 <h1 className="text-2xl font-bold text-orange-600">{title}</h1>

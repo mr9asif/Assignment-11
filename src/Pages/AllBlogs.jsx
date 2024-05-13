@@ -78,9 +78,11 @@ const AllBlogs = () => {
 
     return (
         <div className="">
-            <h1 className="text-3xl font-bold my-4 text-orange-400 text-center">All Blogs</h1>
+            <h1  data-aos="fade-up"
+            data-aos-duration="1200" className="text-3xl font-bold my-4 text-orange-400 text-center">All Blogs</h1>
 
-            <div className='my-4 px-7  flex justify-evenly items-center bg-orange-200  border rounded-xl py-4'>
+            <div  data-aos="fade-up"
+            data-aos-duration="1200" className='my-4 px-7  flex justify-evenly items-center bg-orange-200  border rounded-xl py-4'>
                 <div className="dropdown dropdown-right">
                     <div tabIndex={0} role="button" className="flex items-center border px-5 text-xl py-2 bg-gray-400  hover:bg-orange-500 hover:text-white cursor-pointer rounded-xl gap-2 "><button>{selectedCatagory ? selectedCatagory : 'All'}</button></div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
@@ -103,7 +105,7 @@ const AllBlogs = () => {
              <div>
              {filteredBlogs.length === 0 ? <div className="mb-36"><h1 className="text-4xl mt-24 font-bold text-center">No Blogs Found</h1></div> :
                  
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border mb-4 gap-4 max-w-7xl mx-auto">
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mb-4 gap-4 max-w-7xl mx-auto">
              {filteredBlogs.map(blog => <Blogs key={blog._id} blog={blog} />)}
          </div>
 

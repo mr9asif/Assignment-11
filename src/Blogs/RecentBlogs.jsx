@@ -45,7 +45,8 @@ const RecentBlogs = () => {
 
     return (
         <div className="max-w-7xl mx-auto">
-            <h1 className="text-3xl font-bold my-4 text-orange-400 text-center">Recent Blogs</h1>
+            <h1  data-aos="fade-down"
+            data-aos-duration="1200" className="text-3xl font-bold my-4 text-orange-400 text-center">Recent Blogs</h1>
 
             <div id="blogSection" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                  {

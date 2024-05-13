@@ -9,10 +9,12 @@ const AboutUs = () => {
         <div className="max-w-[95%]  lg:max-w-7xl mx-auto  my-12 mb-9">
          
         <div className="flex items-center ">
-        <div>
+        <div  data-aos="fade-up"
+        data-aos-duration="3000">
         <img  className="w-[600px] md:w-[500px] lg:w-[900px] h-[300px] md:h-[400px] lg:h-[650px]" src="https://i.postimg.cc/ZRtNWV1T/blogging-083016.jpg" alt="" />
         </div>
-        <div className="bg-gray-500 md:w-[600px] lg:w-[1000px] h-[430px] md:h-[460px] lg:h-[560px] p-6 relative md:right-10 lg:right-16">
+        <div  data-aos="fade-down"
+        data-aos-duration="3000" className="bg-gray-500 md:w-[600px] lg:w-[1000px] h-[430px] md:h-[460px] lg:h-[560px] p-6 relative md:right-10 lg:right-16">
          <h2 className="text-xl lg:text-2xl font-bold text-green-900">ABOUT US</h2>
          <h3 className="text-2xl lg:text-4xl text-gray-400 font-bold mb-2 mt-1">We Provide Best Blogs in our Website!</h3>
          <p className="text-[13px] lg:text-[16px] mb-3 text-gray-800">BlogNestle is dedicated to providing nourishing content that informs, inspires, and satisfies our community</p>

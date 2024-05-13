@@ -30,7 +30,8 @@ const FeaturedBlogs = () => {
       
     return (
         <div>
-            <h1 className="text-3xl font-bold text-orange-500 text-center my-6">Latest Blogs</h1>
+            <h1  data-aos="fade-up"
+            data-aos-duration="2000" className="text-3xl font-bold text-orange-500 text-center my-6">Latest Blogs</h1>
 
                 <div className="my-6">
                 {

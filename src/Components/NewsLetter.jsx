@@ -14,15 +14,19 @@ const NewsLetter = () => {
             }
     }
     return (
-        <div className="flex justify-between items-center max-w-5xl mx-auto my-12 px-8">
+        <div  data-aos="fade-up"
+        data-aos-duration="3000" className="flex justify-between items-center max-w-5xl mx-auto my-12 px-8">
                   <div className="w-1/2" >
                   <img className="w-[1000px]" src="https://i.postimg.cc/P5wq8fVc/3551757.webp" alt="" />
                   </div>
 
         <div className="w-1/2 p-4">
-        <h2 className=" font-semibold text-lg text-green-700 mb-2"> Stay Informed, Inspired, and Connected Every Week to</h2>
-        <h2 className="text-lg font-semibold mb-2 text-orange-400">Subscribe  Our Newsletter</h2>
-        <form onSubmit={handleSubmit} className="flex flex-col p-6 ">
+        <h2  data-aos="fade-up"
+        data-aos-duration="3000" className=" font-semibold text-lg text-green-700 mb-2"> Stay Informed, Inspired, and Connected Every Week to</h2>
+        <h2  data-aos="fade-up"
+        data-aos-duration="3000" className="text-lg font-semibold mb-2 text-orange-400">Subscribe  Our Newsletter</h2>
+        <form  data-aos="fade-up"
+        data-aos-duration="3000" onSubmit={handleSubmit} className="flex flex-col p-6 ">
             <input
                 type="text"
                  name="name"

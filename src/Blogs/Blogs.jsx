@@ -54,7 +54,8 @@ const Blogs = ({ blog }) => {
     return (
         <div>
                
-            <div data-aos="fade-up" className="bg-gray-200 shadow-lg rounded-md relative h-[510px]">
+            <div  data-aos="fade-up"
+            data-aos-duration="1200" className=" shadow-lg rounded-md relative h-[510px]">
                 <img className="w-full h-[300px] p-2" src={imageUrl} alt="" />
                 <div className="p-5">
                     <h1 className="text-2xl font-bold text-orange-600 ">{title}</h1>

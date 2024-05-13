@@ -5,8 +5,9 @@ const Fblog = ({fblog, index}) => {
     console.log(fblog)
    
     return (
-        <div className="max-w-5xl mx-auto px-2">
-        <table className="p-4 flex border justify-between items-center">
+        <div  className="max-w-5xl mx-auto px-2">
+        <table  data-aos="fade-up"
+        data-aos-duration="2000" className="p-4 flex border justify-between items-center">
         <th>
             <h1>{index}</h1>
         </th>
