@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import UseAxiosSecure from "../UseAxios/UseAxiosSecure";
 import RBlog from "./RBlog";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 const RecentBlogs = () => {
     const axiosSecure = UseAxiosSecure(); // UseAxiosSecure returns the axios instance directly
@@ -18,7 +19,25 @@ const RecentBlogs = () => {
 
     console.log(data);
      if(isPending){
-         return <h1>Loading Data..........</h1>
+        return (
+            <div className="max-w-7xl mx-auto my-3 ">
+                <SkeletonTheme baseColor="#202020" highlightColor="#444">
+                    <div>
+                        <h1 className="text-center">
+                            <Skeleton width={400} height={40} />
+                        </h1>
+                        <div className="grid grid-cols-3  gap-3">
+                         <h1 >  <Skeleton width={400} height={500} count={1} /></h1>
+                         <h1 >  <Skeleton width={400} height={500} count={1} /></h1>
+                         <h1 >  <Skeleton width={400} height={500} count={1} /></h1>
+                         <h1 >  <Skeleton width={400} height={500} count={1} /></h1>
+                         <h1 >  <Skeleton width={400} height={500} count={1} /></h1>
+                         <h1 >  <Skeleton width={400} height={500} count={1} /></h1>
+                        </div>
+                    </div>
+                </SkeletonTheme>
+            </div>
+        );
      }
     if (isError && error) {
         console.log(error);
