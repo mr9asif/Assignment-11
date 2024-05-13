@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDliQWv1ssQmgD8j8qi8I0WmbMHc-Y-tAU",
-  authDomain: "blognestle-21ef2.firebaseapp.com",
-  projectId: "blognestle-21ef2",
-  storageBucket: "blognestle-21ef2.appspot.com",
-  messagingSenderId: "304086709291",
-  appId: "1:304086709291:web:90c1ecd292b606db57266e"
+  apiKey:import.meta.env.VITE_APIKEY,
+  authDomain:import.meta.env.VITE_DOMAIN,
+  projectId:import.meta.env.VITE_PROJECTID,
+  storageBucket:import.meta.env.VITE_STORAGE,
+  messagingSenderId:import.meta.env.VITE_MESSAGE,
+  appId:import.meta.env.VITE_API
 };
 
 // Initialize Firebase

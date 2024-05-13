@@ -4,18 +4,10 @@ import { useNavigate } from "react-router-dom";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css'
 const PrivetRoute = ({ children }) => {
-    const [loading, setLoading] = useState(true);
+  
     const navigate = useNavigate();
-    const { user } = useContext(AuthContext);
-
-    useEffect(() => {
-        // Simulate an asynchronous authentication check
-        const delay = setTimeout(() => {
-            setLoading(false);
-        }, 1000);
-
-        return () => clearTimeout(delay);
-    }, []);
+    const { user, loading } = useContext(AuthContext);
+     
 
     if (loading) {
         return (

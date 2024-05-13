@@ -64,9 +64,9 @@ const router=createBrowserRouter([
             },
             {
                 path:'/viewdetails/:id',
-                element:<Redirect>
+                element:<PrivetRoute>
                 <ViewDetails></ViewDetails>,
-                </Redirect>
+                </PrivetRoute>
               
                 
             },

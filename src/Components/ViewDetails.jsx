@@ -12,6 +12,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 const ViewDetails = () => {
   const navigate = useNavigate()
   const {user} = useContext(AuthContext)
+  const [loading, setLoading]= useState(true)
  
   const {photoURL, displayName, email}= user;
   const [comments, setComments]= useState([])
@@ -32,6 +33,7 @@ const ViewDetails = () => {
            .then(data => {
            
                setDetails(data)
+               setLoading(false)
            })
    }, [id]);
 
@@ -82,16 +84,19 @@ const ViewDetails = () => {
 
     //  fetchComments()
    },[])
-
+      
+   if(loading){
+    return <h>Loaidng...</h>
+   }
    
-   if(!user){
-    return navigate('/login')
-  }
+  //  if(!user){
+  //   return navigate('/login')
+  // }
       
 
   return (
     <div className="max-w-6xl mx-auto my-6   ">
-      <div className="bg-gray-200 shadow-lg rounded-md  ">
+      <div className="bg-gray-100 shadow-lg rounded-md  ">
         <img className="w-full h-[460px] p-2" src={imageUrl} alt="" />
         <div className="p-8">
           <h1 className="text-4xl font-bold text-orange-600 my-6 ">{title}</h1>
@@ -116,7 +121,7 @@ const ViewDetails = () => {
          </div>
           ) : (
                  <div className="w-[100%] mx-auto">
-                <Link to={`/updateblogs/${_id}`}> <button className="w-full btn btn-outline hover:bg-orange-600 hover:text-white">Update</button></Link>
+                <Link to={`/updateblogs/${_id}`}> <button className="w-full btn btn-outline text-gray-400 hover:bg-orange-600 hover:text-white">Update</button></Link>
                  </div>
           )
          }

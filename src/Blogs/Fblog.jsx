@@ -5,14 +5,14 @@ const Fblog = ({fblog, index}) => {
     console.log(fblog)
    
     return (
-        <div  className="max-w-5xl mx-auto px-2">
+        <div  className="max-w-5xl mx-auto px-2 bg-slate-100">
         <table  data-aos="fade-up"
         data-aos-duration="2000" className="p-4 flex border justify-between items-center">
         <th>
             <h1>{index}</h1>
         </th>
         <tr className="flex gap-3">
-            <td><h1 className="text-[13px] lg:text-xl font-semibold text-gray-700"> <span className="text-xl font-bold text-orange-800"></span>{fblog.title}</h1></td>
+            <td><h1 className="text-[13px] lg:text-xl font-semibold text-green-700"> <span className="text-xl font-bold text-orange-800"></span>{fblog.title}</h1></td>
           
          
 

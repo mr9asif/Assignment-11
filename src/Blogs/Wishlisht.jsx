@@ -1,8 +1,8 @@
-import axios from "axios";
-import { useEffect } from "react";
+
+import { PhotoProvider, PhotoView } from "react-photo-view";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-
+import 'react-photo-view/dist/react-photo-view.css';
 
 const Wishlisht = ({wish, wishlist, setWishlist}) => {
     const { imageUrl, title, _id, catagory, shortDiscription, lognDescription } = wish;
@@ -44,7 +44,11 @@ const Wishlisht = ({wish, wishlist, setWishlist}) => {
     return (
         <div>
         <div className="bg-gray-200 shadow-lg rounded-md relative h-[500px]">
-        <img className="w-full h-[300px] p-2" src={imageUrl} alt="" />
+        <PhotoProvider>
+        <PhotoView src={imageUrl}>
+          <img className="w-full h-[300px] p-2" src={imageUrl} alt="" />
+        </PhotoView>
+      </PhotoProvider>
         <div className="p-5">
             <h1 className="text-2xl font-bold text-orange-600 ">{title}</h1>
             <h1 className="text-xl font-bold text-green-600"><span>Catagory: </span>{catagory}</h1>

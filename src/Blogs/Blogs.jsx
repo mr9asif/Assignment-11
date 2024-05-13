@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 
 import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
-
+import 'react-photo-view/dist/react-photo-view.css';
+import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const Blogs = ({ blog }) => {
 
@@ -18,13 +19,13 @@ const Blogs = ({ blog }) => {
         const b = { imageUrl, title, _id, catagory, shortDiscription, lognDescription, email };
 
         // Fetch wishlist data
-        axios.get(`http://localhost:4000/wishlistblogs/${email}` )
+        axios.get(`http://localhost:4000/wishlist/${email}` )
             .then(res => {
                 console.log(res.data);
                
 
                 // Check if the blog already exists in the wishlist
-                const existingWish = res.data.find(w => w._id === _id);
+                const existingWish = res.data.find(w => w.title === title);
                 if (existingWish) {
                     toast.error('This blog is already in your wishlist');
                     return; 
@@ -53,10 +54,15 @@ const Blogs = ({ blog }) => {
  
     return (
         <div>
-               
+       
             <div  data-aos="fade-up"
             data-aos-duration="1200" className=" shadow-lg rounded-md relative h-[510px]">
-                <img className="w-full h-[300px] p-2" src={imageUrl} alt="" />
+            <PhotoProvider>
+            <PhotoView src={imageUrl}>
+              <img className="w-full h-[300px] p-2" src={imageUrl} alt="" />
+            </PhotoView>
+          </PhotoProvider>
+
                 <div className="p-5">
                     <h1 className="text-2xl font-bold text-orange-600 ">{title}</h1>
                     <h1 className="text-xl font-bold text-green-600"><span>Catagory: </span>{catagory}</h1>
