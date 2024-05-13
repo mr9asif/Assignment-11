@@ -12,14 +12,14 @@ const Fblog = ({fblog, index}) => {
             <h1>{index}</h1>
         </th>
         <tr className="flex gap-3">
-            <td><h1 className="text-xl font-semibold text-gray-700"> <span className="text-xl font-bold text-orange-800"></span>{fblog.title}</h1></td>
+            <td><h1 className="text-[13px] lg:text-xl font-semibold text-gray-700"> <span className="text-xl font-bold text-orange-800"></span>{fblog.title}</h1></td>
           
          
 
         </tr>
         <tr>
             <td className="flex items-center gap-5">
-            <td><h1 className="text-xl font-semibold text-gray-600"> <span className="text-xl font-bold text-orange-800"></span>{fblog.username}</h1></td>
+            <td><h1 className="text-[12px] lg:text-xl font-semibold text-gray-600"> <span className="text-xl font-bold text-orange-800"></span>{fblog.username}</h1></td>
             <img className="w-[60px] h-[60px] rounded-[50%]" src={fblog.profile} alt="" />
             </td>
         </tr>

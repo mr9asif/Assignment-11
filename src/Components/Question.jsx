@@ -2,13 +2,16 @@ import React from 'react';
 
 const Question = () => {
     return (
-        <div className='my-24'>
+        <div className='my-24 md:mx-6'>
         <h1  data-aos="fade-down"
         data-aos-duration="1500" className='text-3xl mt-7 font-bold text-green-400 text-center my-6'>Frequently Asked?</h1>
-        <div className='max-w-5xl mx-auto flex justify-between items-center my-6 mt-12 '>
-                  
+        <div className='max-w-5xl mx-auto md:flex lg:flex justify-between items-center my-6 mt-12 '>
+        <div  data-aos="fade-down"
+        data-aos-duration="3000" className='lg:w-1/3'>
+        <img  src="https://i.postimg.cc/kGGt1sbD/question-box-9890616-8022563.png" alt="" />
+      </div>
         <div  data-aos="fade-up"
-        data-aos-duration="3000" className='w-1/2  '>
+        data-aos-duration="3000" className='w-[95%] mx-auto lg:w-1/2  '>
         <div className="collapse bg-base-200 mb-1">
         <input type="radio" name="my-accordion-1" defaultChecked /> 
         <div className="collapse-title text-xl font-medium bg-slate-300">
@@ -46,10 +49,7 @@ const Question = () => {
         </div>
       </div>
         </div>
-        <div  data-aos="fade-down"
-        data-aos-duration="3000" className='w-1/3'>
-        <img src="https://i.postimg.cc/kGGt1sbD/question-box-9890616-8022563.png" alt="" />
-      </div>
+        
     </div>
         </div>
     );

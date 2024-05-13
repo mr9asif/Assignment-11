@@ -54,7 +54,7 @@ const AddBlog = () => {
 
     return (
         <div>
-        <div className="max-w-8xl mx-auto  py-6">
+        <div className="w-[95%] lg:max-w-8xl mx-auto  py-6">
         <h1 className="text-4xl text-orange-600 text-center font-bold py-5 ">ADD YOUR Blogs </h1>
        <div className="p-8 max-w-4xl mx-auto bg-gray-400 rounded-xl my-4 ">
        <form  onSubmit={handleAdd} className="grid grid-cols-2 gap-4">

@@ -81,7 +81,7 @@ const AllBlogs = () => {
             <h1  data-aos="fade-up"
             data-aos-duration="1200" className="text-3xl font-bold my-4 text-orange-400 text-center">All Blogs</h1>
 
-            <div  data-aos="fade-up"
+            <div   data-aos="fade-up"
             data-aos-duration="1200" className='my-4 px-7  flex justify-evenly items-center bg-orange-200  border rounded-xl py-4'>
                 <div className="dropdown dropdown-right">
                     <div tabIndex={0} role="button" className="flex items-center border px-5 text-xl py-2 bg-gray-400  hover:bg-orange-500 hover:text-white cursor-pointer rounded-xl gap-2 "><button>{selectedCatagory ? selectedCatagory : 'All'}</button></div>
@@ -93,8 +93,8 @@ const AllBlogs = () => {
                     </ul>
                 </div>
                 <form onSubmit={handleSearch}>
-                    <div className="flex justify-center items-center gap-3 ">
-                        <input placeholder="Search here.."  onChange={e => setSearchInput(e.target.value)} type="text" className='p-2 bg-gray-100 rounded-xl  text-gray-900 font-bold' name="search" id="" />
+                    <div className="flex justify-center items-center gap-3 smd:w-[95%] mx-auto">
+                        <input placeholder="Search here.."  onChange={e => setSearchInput(e.target.value)} type="text" className='p-2 bg-gray-100 rounded-xl w-[150px] md:w-[200px] lg:w-[249px] text-gray-900 font-bold' name="search" id="" />
                         <div className="flex items-center border px-3 py-2  hover:bg-orange-500 hover:text-white cursor-pointer rounded-xl gap-2">
                             <button type="submit" className="font-bold">Search</button>
                             <FaSearch />
@@ -103,7 +103,7 @@ const AllBlogs = () => {
                 </form>
             </div>
              <div>
-             {filteredBlogs.length === 0 ? <div className="mb-36"><h1 className="text-4xl mt-24 font-bold text-center">No Blogs Found</h1></div> :
+             {filteredBlogs.length === 0 ? <div className="md:mb-[45vh] lg:mb-36"><h1 className="text-4xl mt-24 font-bold text-center">No Blogs Found</h1></div> :
                  
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mb-4 gap-4 max-w-7xl mx-auto">
              {filteredBlogs.map(blog => <Blogs key={blog._id} blog={blog} />)}

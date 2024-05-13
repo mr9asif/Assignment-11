@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     window.scrollTo(0,0)
     return (
-        <div className='max-w-7xl mx-auto my-8'>
+        <div className='w-[95%]   sm:p-3 mx-auto md:mx-6 my-8'>
             <h1  data-aos="fade-up"
             data-aos-duration="3000" className='text-xl font-semibold my-3'>Welcome to BlogNestle! Our platform is dedicated to providing a space where bloggers and readers alike can come together to explore and share their passion for writing and reading. Whether you're an aspiring blogger looking to share your thoughts with the world or a keen reader searching for captivating content, BlogNestle offers a diverse range of blog posts covering various topics and interests.</h1>
              <p  data-aos="fade-up"

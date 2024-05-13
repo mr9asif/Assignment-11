@@ -32,65 +32,65 @@ const Feedback = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div  data-aos="fade-right"  data-aos-duration="1200" className='flex flex-col justify-center h-[250px] items-center gap-1 shadow-lg p-3 bg-gray-400'>
-            <div className='w-[120px] h-[100px] p-1 '>
-             <img className='border rounded-[50%]' src="https://i.postimg.cc/Jhp5xP6H/Picsart-24-01-11-19-58-30-317.jpg" alt="" />
+          <div  data-aos="fade-right"  data-aos-duration="1200" className='flex flex-col justify-center  lg:h-[280px] items-center gap-1 shadow-lg p-3 bg-gray-400'>
+            <div className='w-[80px] lg:w-[100px] h-[70px] lg:h-[100px] p-1 '>
+             <img className=' border rounded-[50%]' src="https://i.postimg.cc/Jhp5xP6H/Picsart-24-01-11-19-58-30-317.jpg" alt="" />
             </div>
             <div className=''>
-            <p className='text-[13px] font-semibold text-gray-700'>I'm thrilled to contribute! Your platform provides a valuable space for sharing insights and ideas!</p>
-               <h1 className='text-xl font-bold text-gray-500'>Contributor Name</h1>
-                <h3 className='text-xl font-bold text-orange-800'>Asif Khan</h3>
+            <p className='text-[12px] lg:text-[13px] font-semibold text-gray-700'>I'm thrilled to contribute! Your platform provides a valuable space for sharing insights and ideas!</p>
+               <h1 className=' lg:text-xl font-bold text-gray-500'>Contributor Name</h1>
+                <h3 className=' lg:text-xl font-bold text-orange-800'>Asif</h3>
             </div>
           </div>
         
         </SwiperSlide>
         <SwiperSlide>
-        <div  data-aos="fade-right"  data-aos-duration="1200"  className='flex flex-col justify-center h-[250px] items-center gap-1 shadow-lg p-3 bg-gray-400'>
-            <div className='w-[120px] h-[100px] p-1 '>
-             <img className='border rounded-[50%]' src="https://i.postimg.cc/K8qJ90sh/download.jpg" alt="" />
+        <div  data-aos="fade-right"  data-aos-duration="1200"  className='flex flex-col justify-center h-[280px] items-center gap-1 shadow-lg p-3 bg-gray-400'>
+            <div className='w-[80px] lg:w-[100px] h-[100px] p-1 '>
+             <img className=' border rounded-[50%]' src="https://i.postimg.cc/K8qJ90sh/download.jpg" alt="" />
             </div>
             <div className=''>
-            <p className='text-[13px] font-semibold text-gray-700'>Contributing here feels like joining a family of passionate thinkers. Looking forward to more exchanges!</p>
-               <h1 className='text-xl font-bold text-gray-500'>Contributor Name</h1>
-                <h3 className='text-xl font-bold text-orange-800'>ATLAN</h3>
+            <p className='text-[12px] lg:text-[13px] font-semibold text-gray-700'>Contributing here feels like joining a family of passionate thinkers. Looking forward to more exchanges!</p>
+               <h1 className='lg:text-xl font-bold text-gray-500'>Contributor Name</h1>
+                <h3 className='lg:text-xl font-bold text-orange-800'>ATLAN</h3>
             </div>
           </div>
       
         </SwiperSlide>
         <SwiperSlide>
-        <div  data-aos="fade-right"  data-aos-duration="1200"  className='flex flex-col justify-center h-[250px] items-center gap-1 shadow-lg p-3 bg-gray-400'>
-            <div className='w-[120px] h-[100px] p-1 '>
+        <div  data-aos="fade-right"  data-aos-duration="1200"  className='flex flex-col justify-center h-[280px] items-center gap-1 shadow-lg p-3 bg-gray-400'>
+            <div className='w-[80px] lg:w-[100px] h-[100px] p-1 '>
              <img className='border rounded-[50%]' src="https://i.postimg.cc/jSzT5Wx2/cheerful-dark-skinned-woman-smiling-broadly-rejoicing-her-victory-competition-among-young-writers-st.jpg" alt="" />
             </div>
             <div className=''>
-            <p className='text-[13px] font-semibold text-gray-700'>t's empowering to be part of a community where my voice matters. Keep up the great work</p>
-               <h1 className='text-xl font-bold text-gray-500'>Contributor Name</h1>
-                <h3 className='text-xl font-bold text-orange-800'>RAKA</h3>
+            <p className='text-[12px] lg:text-[13px] font-semibold text-gray-700'>t's empowering to be part of a community where my voice matters. Keep up the great work</p>
+               <h1 className='lg:text-xl font-bold text-gray-500'>Contributor Name</h1>
+                <h3 className='lg:text-xl font-bold text-orange-800'>RAKA</h3>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide >
-        <div  data-aos="fade-right"  data-aos-duration="1200"  className='flex flex-col justify-center h-[250px] items-center gap-1 shadow-lg p-3 bg-gray-400'>
-            <div className='w-[120px] h-[100px] p-1 '>
+        <div  data-aos="fade-right"  data-aos-duration="1200"  className='flex flex-col justify-center h-[280px] items-center gap-1 shadow-lg p-3 bg-gray-400'>
+            <div className='w-[80px] lg:w-[100px] h-[80px] lg:h-[100px] p-1 '>
              <img className='border rounded-[50%]' src="https://i.postimg.cc/htTvCwMT/pexels-photo-771742.jpg" alt="" />
             </div>
             <div className=''>
-            <p className='text-[13px] font-semibold text-gray-700'>I appreciate the chance to contribute to such a vibrant platform. Let's keep the dialogue going</p>
-               <h1 className='text-xl font-bold text-gray-500'>Contributor Name</h1>
-                <h3 className='text-xl font-bold text-orange-800'>Ahsan</h3>
+            <p className='text-[12px] lg:text-[13px] font-semibold text-gray-700'>I appreciate the chance to contribute to such a vibrant platform. Let's keep the dialogue going</p>
+               <h1 className='lg:text-xl font-bold text-gray-500'>Contributor Name</h1>
+                <h3 className='lg:text-xl font-bold text-orange-800'>Ahsan</h3>
             </div>
           </div>
         
         </SwiperSlide>
         <SwiperSlide >
-        <div  data-aos="fade-right"  data-aos-duration="1200"  className='flex flex-col justify-center h-[250px] items-center gap-1 shadow-lg p-3 bg-gray-400'>
-            <div className='w-[120px] h-[100px] p-1 '>
+        <div  data-aos="fade-right"  data-aos-duration="1200"  className='flex flex-col justify-center h-[280px] items-center gap-1 shadow-lg p-3 bg-gray-400'>
+            <div className='w-[80px] lg:w-[100px] h-[80px] lg:h-[100px] p-1 '>
              <img className='border rounded-[50%]' src="https://i.postimg.cc/pyb7bZnZ/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair-285396-896.jpg" alt="" />
             </div>
             <div className=''>
-            <p className='text-[13px] font-semibold text-gray-700'>Being able to share my perspectives here is truly fulfilling. Thanks for fostering this inclusive environment!</p>
-               <h1 className='text-xl font-bold text-gray-500'>Contributor Name</h1>
-                <h3 className='text-xl font-bold text-orange-800'>PILU</h3>
+            <p className='text-[12px] lg:text-[13px] font-semibold text-gray-700'>Being able to share my perspectives here is truly fulfilling. Thanks for fostering this inclusive environment!</p>
+               <h1 className='lg:text-xl font-bold text-gray-500'>Contributor Name</h1>
+                <h3 className='text-[12px] lg:text-xl font-bold text-orange-800'>PILU</h3>
             </div>
           </div>
         </SwiperSlide>
