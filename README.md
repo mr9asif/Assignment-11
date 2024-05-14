@@ -15,6 +15,7 @@ Welcome to BlogNestle, a dynamic community platform where bloggers can share the
 - Node.js
 - MongoDB
 - Axios
+- Tanstack Query
 - JWT for authentication
 - Firebase
 
@@ -47,5 +48,5 @@ What you need to install the software:
 
 1. **Clone the repository**
    ```bash
-   [https://github.com/Porgramming-Hero-web-course/b9a11-client-side-mr9asif.git]
+   https://github.com/Porgramming-Hero-web-course/b9a11-client-side-mr9asif.git
    cd BlogNestle
