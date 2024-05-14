@@ -3,8 +3,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import Swal from 'sweetalert2';
 
 import axios from 'axios';
-import toast from 'react-hot-toast';
-import Skeleton from 'react-loading-skeleton';
+
 
 const AddBlog = () => {
     const {user} = useContext(AuthContext)
@@ -25,7 +24,7 @@ const AddBlog = () => {
         }
               console.log(Blogs)
 
-              axios.post('http://localhost:4000/addblogs', Blogs)
+              axios.post('https://as-11-server.vercel.app/addblogs', Blogs)
               .then(response => {
                 console.log(response.data);
                 if (response.data.insertedId) {
@@ -37,18 +36,14 @@ const AddBlog = () => {
                     timer: 2000
                   });
 
-                // toast.success('you added successfully')
+            
                 }
               })
               .catch(error => {
                 console.error('Error:', error);
               });
             
-        //   .then(data=>{
-        //     console.log(data)
-        //    
-        //   })
-
+       
 
     }
 

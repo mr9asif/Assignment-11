@@ -22,7 +22,7 @@ const Wishlisht = ({wish, wishlist, setWishlist}) => {
           confirmButtonText: "Yes, delete it!"
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:4000/wish/${id}`, {
+            fetch(`https://as-11-server.vercel.app/wish/${id}`, {
               method: 'DELETE'
             })
               .then(res => res.json())

@@ -34,7 +34,7 @@ const Navbar = () => {
 
   const handleSignOut = async() =>{
    await  signout()
-   axios.post('http://localhost:4000/logout', {}, {withCredentials:true})
+   axios.post('https://as-11-server.vercel.app//logout', {}, {withCredentials:true})
   }
     return (
         <div>

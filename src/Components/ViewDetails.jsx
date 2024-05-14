@@ -8,6 +8,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import toast from "react-hot-toast";
 import Comment from "./Comment";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 const ViewDetails = () => {
   const navigate = useNavigate()
@@ -28,7 +29,7 @@ const ViewDetails = () => {
 
        
    useEffect(() => {
-       fetch(`http://localhost:4000/viewdetails/${id}` )
+       fetch(`https://as-11-server.vercel.app/viewdetails/${id}` )
            .then(res => res.json())
            .then(data => {
            
@@ -39,7 +40,7 @@ const ViewDetails = () => {
 
 
    const fetchComments = () => {
-    axios('http://localhost:4000/allcomments')
+    axios('https://as-11-server.vercel.app/allcomments')
       .then(res => {
         console.log(res.data)
         setComments(res.data)
@@ -55,7 +56,7 @@ const ViewDetails = () => {
         const comment = form.comment.value;
         const id = _id;
         const com = {comment, photoURL, displayName, id}
-        axios.post('http://localhost:4000/addcomments', com)
+        axios.post('https://as-11-server.vercel.app/addcomments', com)
         .then(res=>{
           console.log(res.data)
           if(res.data.insertedId){
@@ -73,7 +74,7 @@ const ViewDetails = () => {
 
 
    useEffect(()=>{
-     axios('http://localhost:4000/allcomments')
+     axios('https://as-11-server.vercel.app/allcomments')
      .then(res=>{
       console.log(res.data)
       setComments(res.data)
@@ -86,7 +87,25 @@ const ViewDetails = () => {
    },[])
       
    if(loading){
-    return <h>Loaidng...</h>
+    return (
+      <div className="max-w-7xl mx-auto">
+      <SkeletonTheme baseColor="#202020" highlightColor="#444">
+      <div>
+          <h1 className="text-center">
+              <Skeleton width={400} height={40} />
+          </h1>
+          <div className="">
+          
+           <h1 >  <Skeleton width={700} height={400} count={1} /></h1>
+           <h1 >  <Skeleton width={700} height={200} count={1} /></h1>
+           <h1 >  <Skeleton width={700} height={200} count={1} /></h1>
+           
+          
+          </div>
+      </div>
+  </SkeletonTheme>
+      </div>
+    )
    }
    
   //  if(!user){

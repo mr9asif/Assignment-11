@@ -16,10 +16,10 @@ const Blogs = ({ blog }) => {
 
     const handleWishList = () => {
    
-        const b = { imageUrl, title, _id, catagory, shortDiscription, lognDescription, email };
+        const b = { imageUrl, blogid:_id, title, catagory, shortDiscription, lognDescription, email };
 
         // Fetch wishlist data
-        axios.get(`http://localhost:4000/wishlist/${email}` )
+        axios.get(`https://as-11-server.vercel.app/wishlist/${email}` )
             .then(res => {
                 console.log(res.data);
                
@@ -32,7 +32,7 @@ const Blogs = ({ blog }) => {
                 }
 
                 // If the blog doesn't exist, add it to the wishlist
-                axios.post('http://localhost:4000/addwishlist', b)
+                axios.post('https://as-11-server.vercel.app/addwishlist', b)
                     .then(res => {
                         console.log(res.data);
                         if (res.data && res.data.insertedId) {

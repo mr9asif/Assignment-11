@@ -20,7 +20,7 @@ const UpdateBlogs = () => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:4000/viewdetails/${id}`)
+    fetch(`https://as-11-server.vercel.app/viewdetails/${id}`)
         .then(res => res.json())
         .then(data => {
         
@@ -64,7 +64,7 @@ const UpdateBlogs = () => {
                     icon: "success"
                   });
 
-                  fetch(`http://localhost:4000/update/${id}`,{
+                  fetch(`https://as-11-server.vercel.app/update/${id}`,{
                     method:'PUT',
                     headers:{
                         'content-type': 'application/json'
@@ -88,7 +88,7 @@ const UpdateBlogs = () => {
 //   const {imageUrl, title,_id, catagory,shortDiscription , lognDescription, userEmail} = update;
 
     //  useEffect(() => {
-    //     fetch(`http://localhost:4000/update/${id}`)
+    //     fetch(https://as-11-server.vercel.app//update/${id}`)
     //         .then(res => res.json())
     //         .then(data => {
     //             console.log(data);
