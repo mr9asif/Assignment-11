@@ -53,7 +53,7 @@ const AuthProvider = ({ children }) => {
 
     // Sign out
     const signout=()=>{
-      
+        setLoading(true)
         setUser(null)
         return signOut(auth)
        }
@@ -68,7 +68,7 @@ const AuthProvider = ({ children }) => {
       })
       return ()=> unsubscribe()
      
-    },[auth])
+    },[])
 
     const info = {
         user,

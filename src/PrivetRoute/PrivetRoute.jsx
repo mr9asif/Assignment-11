@@ -7,7 +7,7 @@ const PrivetRoute = ({ children }) => {
   
     const navigate = useNavigate();
     const { user, loading } = useContext(AuthContext);
-     
+      console.log(loading)
 
     if (loading) {
         return (

@@ -70,8 +70,8 @@ const handleSocialLogin = socialLogin =>{
      setError('invalid Email or Password!')
    })}
     return (
-        <div  className="flex justify-between items-center max-w-6xl mx-auto px-5 ">
-        <div className="w-1/2">
+        <div  className=" md:flex lg:flex justify-between items-center max-w-6xl mx-auto px-5 ">
+        <div className="w-[96%] mx-auto md:w-1/2 lg:w-1/2">
         <img src="https://i.postimg.cc/0jfnHHxp/login-page-4468581-3783954.png" alt="" />
     </div>
 

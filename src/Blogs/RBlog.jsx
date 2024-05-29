@@ -14,7 +14,7 @@ const RBlog = ({ blog }) => {
 
     const handleWishList = () => {
    
-        const b = { imageUrl, title, _id, catagory, shortDiscription, lognDescription, email };
+        const b = { imageUrl, title,  catagory, shortDiscription, lognDescription, email };
 
         // Fetch wishlist data
         axios.get(`https://as-11-server.vercel.app/wishlist/${email}`)

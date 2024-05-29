@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 import axios from "axios";
-import UseAxiosSecure from "../UseAxios/UseAxiosSecure";
+
 
 
 const Navbar = () => {
@@ -34,7 +34,7 @@ const Navbar = () => {
 
   const handleSignOut = async() =>{
    await  signout()
-   axios.post('https://as-11-server.vercel.app//logout', {}, {withCredentials:true})
+   axios.post('https://as-11-server.vercel.app/logout', {}, {withCredentials:true})
   }
     return (
         <div>
@@ -47,13 +47,19 @@ const Navbar = () => {
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
             <NavLink to='/' className={({isActive})=>isActive? 'text-bold text-orange-400' : 'text-bold' || 'hover:bg-green-500 text-[18px]'}>Home</NavLink>
             <NavLink to='/allblogs' className={({isActive})=>isActive? 'text-bold text-orange-400' : 'text-bold'}>All Blogs</NavLink>
-            <NavLink to='/addblogs' className={({isActive})=>isActive? 'text-bold text-orange-400' : 'text-bold'}>ADD Blogs</NavLink>
+           {
+            user &&  <NavLink to='/addblogs' className={({isActive})=>isActive? 'text-bold text-orange-400' : 'text-bold'}>ADD Blogs</NavLink>
+           }
             <NavLink to='featureblogs' className={({isActive})=>isActive? 'text-bold text-orange-400' : 'text-bold'}>FeaturedBlogs</NavLink>
             {
               user &&  <NavLink to='/wishlistblogs' className={({isActive})=>isActive?'text-bold text-orange-400' : 'text-bold'}>WishLists</NavLink>
             }
+            {
+              user &&  <NavLink to='/dashboard' className={({isActive})=>isActive?'text-bold text-orange-400' : 'text-bold'}>Dashboard</NavLink>
+            }
              <NavLink to='/about' className={({isActive})=>isActive?'text-bold text-orange-400': 'text-bold'}>About Us</NavLink>
-            </ul>
+             
+             </ul>
           </div>
          
           <div className="flex items-center gap-2">
@@ -73,6 +79,9 @@ const Navbar = () => {
        }
        {
          user &&  <NavLink to='/wishlistblogs' className={({isActive})=>isActive?' text-orange-400 font-bold underline text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]'}>WishLists</NavLink>
+       }
+       {
+         user &&  <NavLink to='/dashboard' className={({isActive})=>isActive?' text-orange-400 font-bold underline text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]'}>Dashboard</NavLink>
        }
         <NavLink to='/about' className={({isActive})=>isActive?'font-bold text-orange-400 underline text-[18px]' : 'font-bold text-green-600 hover:text-orange-400 text-[18px]'}>About Us</NavLink>
        
@@ -97,11 +106,11 @@ const Navbar = () => {
                   </Link>
               </div>
           ) : (
-            <div>
-            <Link className="mr-5 btn btn-outline text-orange-400 hover:bg-orange-400 font-bold text-xl hover:text-white" to='/register'>
+            <div className="flex items-center">
+            <Link className="md:mr-4 lg:mr-5 btn btn-outline text-orange-400 hover:bg-orange-400 font-bold text-[13px] md:text-xl lg:text-xl hover:text-white" to='/register'>
                 Register
             </Link>
-            <Link className="btn btn-outline text-orange-400 hover:bg-orange-400 font-bold text-xl hover:text-white" to='/login'>
+            <Link className="btn btn-outline text-orange-400 hover:bg-orange-400 font-bold text-[13px] md:textt-xl lg:text-xl hover:text-white" to='/login'>
                 Login
             </Link>
         </div>

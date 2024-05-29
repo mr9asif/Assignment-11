@@ -13,6 +13,7 @@ import PrivetRoute from "../PrivetRoute/PrivetRoute";
 import ViewDetails from "../Components/ViewDetails";
 import UpdateBlogs from "../Components/UpdateBlogs";
 import Redirect from "../PrivetRoute/Redirect";
+import Dashboard from "../Components/Dashboard";
 
 const router=createBrowserRouter([
      {
@@ -51,6 +52,12 @@ const router=createBrowserRouter([
                 </PrivetRoute>
             },
             {
+                path:'/dashboard',
+                element:<PrivetRoute>
+                <Dashboard></Dashboard>
+                </PrivetRoute>
+            },
+            {
                 path:'about',
                 element:<About></About>
             },
@@ -64,9 +71,13 @@ const router=createBrowserRouter([
             },
             {
                 path:'/viewdetails/:id',
-                element:<PrivetRoute>
+                element:
+                <PrivetRoute>
                 <ViewDetails></ViewDetails>,
                 </PrivetRoute>
+                
+                
+                
               
                 
             },

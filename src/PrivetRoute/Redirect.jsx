@@ -8,6 +8,11 @@ const Redirect = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+  
+
     // Check if user is authenticated
     if (!user) {
       // Redirect to login page if user is not authenticated
@@ -18,10 +23,7 @@ const Redirect = ({ children }) => {
   }, [user, navigate]);
 
   // Show loading indicator while authentication status is being checked
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
-
+ 
   // Render children if user is authenticated
   return children;
 };

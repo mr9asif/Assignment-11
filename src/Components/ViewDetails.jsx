@@ -88,17 +88,14 @@ const ViewDetails = () => {
       
    if(loading){
     return (
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
       <SkeletonTheme baseColor="#202020" highlightColor="#444">
       <div>
-          <h1 className="text-center">
-              <Skeleton width={400} height={40} />
-          </h1>
+         >
           <div className="">
           
-           <h1 >  <Skeleton width={700} height={400} count={1} /></h1>
-           <h1 >  <Skeleton width={700} height={200} count={1} /></h1>
-           <h1 >  <Skeleton width={700} height={200} count={1} /></h1>
+         
+           <h1 >  <Skeleton width={1150} height={800} count={1} /></h1>
            
           
           </div>

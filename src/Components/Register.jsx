@@ -5,12 +5,13 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 const Register = () => {
-    const { creatUser, updateUser } = useContext(AuthContext);
+    const { creatUser, updateUser, setLoading } = useContext(AuthContext);
     const [show, setShow] = useState(false)
     const navigate = useNavigate();
-
+    
    
 
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -24,7 +25,16 @@ const Register = () => {
                        toast.success('you successfully register')
                     updateUser(name, image)
                         .then(() => {
+                            const us = { email };
                             navigate('/');
+                            setLoading(false)
+                            axios.post('https://as-11-server.vercel.app/jwt', us ,  {withCredentials:true})
+       .then(res => {
+           console.log(res.data);
+       })
+       .catch(error => {
+           console.log(error.message);
+       });
                         })
                         .catch(error => {
                             console.error("Error updating user profile:", error);
@@ -39,8 +49,8 @@ const Register = () => {
 
 
     return (
-        <div className="flex justify-between items-center max-w-6xl mx-auto px-5">
-            <div className="w-1/2">
+        <div className=" md:flex lg:flex justify-between items-center max-w-6xl mx-auto px-5">
+            <div className="w-[96%] mx-auto md:w-1/2 lg:w-1/2">
                 <img src="https://i.postimg.cc/sxSVzXPy/sign-up-8044864-6430773.png" alt="" />
             </div>
 
